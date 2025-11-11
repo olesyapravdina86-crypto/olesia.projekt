@@ -1,0 +1,40 @@
+/* Hlavní styl pro projekt Olesia */
+:root{
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --accent: #222;
+  --accent-2: #b8860b;
+  --muted: #666;
+  --radius: 10px;
+}
+
+*{box-sizing:border-box;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+body{margin:0;background:var(--bg);color:#111;line-height:1.5}
+header{background:linear-gradient(90deg,var(--accent),#333);color:#fff;padding:18px;text-align:center}
+header h1{margin:0 0 6px 0;font-size:1.6rem}
+header p{margin:0;font-size:0.95rem;color:#ddd}
+
+.main-nav, .sub-nav{background:var(--card);padding:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);margin:10px auto;max-width:1000px;border-radius:8px}
+.main-nav ul{display:flex;gap:12px;list-style:none;justify-content:center;flex-wrap:wrap;padding:0;margin:0}
+.main-nav a{color:var(--accent-2);text-decoration:none;padding:6px 10px;border-radius:6px}
+.main-nav a:hover{background:#f0e6cc}
+
+.sub-nav{display:flex;gap:10px;justify-content:center;align-items:center}
+.sub-nav a{color:var(--accent-2);text-decoration:none;padding:6px 8px;border-radius:6px}
+
+main{max-width:1000px;margin:12px auto;padding:18px;background:var(--card);border-radius:var(--radius);box-shadow:0 8px 30px rgba(0,0,0,0.06)}
+.hero-img{max-width:100%;height:auto;border-radius:8px;margin-top:10px}
+.caption{font-size:0.9rem;color:var(--muted)}
+
+.sublinks{background:linear-gradient(180deg,#fff,#fbfdff);padding:12px;border-radius:8px;margin:12px 0}
+.sublinks ul{margin:0;padding-left:18px}
+footer{max-width:1000px;margin:12px auto;padding:12px;text-align:center;color:var(--muted)}
+
+/* galerie */
+.video-embed iframe, .footer-media iframe{max-width:100%;height:auto;border-radius:8px}
+
+/* responzivita */
+@media (max-width:720px){
+  .main-nav ul{flex-direction:column;align-items:center}
+  .sub-nav{flex-direction:column}
+}
